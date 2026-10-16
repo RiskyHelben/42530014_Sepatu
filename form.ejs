@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<section class="panel sempit">
+  <h1>Tambah Sepatu</h1>
+  <form action="/sepatu/baru" method="POST">
+    <div class="baris">
+      <label for="nama">Nama sepatu</label>
+      <input type="text" id="nama" name="nama" required>
+    </div>
+    <div class="baris">
+      <label for="harga">Harga (Rp)</label>
+      <input type="number" id="harga" name="harga" min="0" required>
+    </div>
+    <div class="baris">
+      <label for="kategori">Potongan</label>
+      <select id="kategori" name="kategori" required>
+        <option value="low">Low-top</option>
+        <option value="mid">Mid-top</option>
+        <option value="high">High-top</option>
+      </select>
+    </div>
+    <button class="tombol" type="submit">Kirim</button>
+  </form>
+</section>
+
+<%- include('../partials/footer') %>

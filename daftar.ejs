@@ -1,0 +1,11 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<h1 class="judul-seksi">Koleksi Sepatu</h1>
+<div class="grid">
+  <% koleksi.forEach(function (s) { %>
+    <%- include('../partials/kartu-sepatu', { s: s }) %>
+  <% }) %>
+</div>
+
+<%- include('../partials/footer') %>

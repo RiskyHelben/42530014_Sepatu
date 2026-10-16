@@ -1,0 +1,18 @@
+<%- include('../partials/head') %>
+<%- include('../partials/navbar') %>
+
+<section class="hero">
+  <h1>Siap turun ke lapangan?</h1>
+  <p><%= slogan %></p>
+  <p class="info">Saat ini tersedia <strong><%= total %></strong> model sepatu.</p>
+  <a class="tombol" href="/sepatu">Lihat Koleksi</a>
+</section>
+
+<h2 class="judul-seksi">Sorotan</h2>
+<div class="grid">
+  <% pilihan.forEach(function (s) { %>
+    <%- include('../partials/kartu-sepatu', { s: s }) %>
+  <% }) %>
+</div>
+
+<%- include('../partials/footer') %>

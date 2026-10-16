@@ -1,0 +1,98 @@
+/* Reset dan box model */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --garis: #334155;
+  --teks: #e2e8f0;
+  --redup: #94a3b8;
+  --aksen: #f97316;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--teks);
+  line-height: 1.6;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--garis);
+}
+.logo { color: var(--teks); text-decoration: none; font-weight: 800; letter-spacing: 1px; font-size: 1.3rem; }
+.logo span { color: var(--aksen); }
+.topbar nav a { color: var(--redup); text-decoration: none; margin-left: 1.5rem; }
+.topbar nav a:hover { color: var(--aksen); }
+
+.wrap { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+
+.hero { padding: 3rem 0; text-align: center; }
+.hero h1 { font-size: 2.4rem; margin-bottom: 0.5rem; }
+.hero .info { margin: 1rem 0 1.5rem; color: var(--redup); }
+
+.judul-seksi { margin: 2rem 0 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.kartu {
+  position: relative;
+  background: var(--panel);
+  border: 1px solid var(--garis);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+.kartu h3 { margin: 1.5rem 0 0.25rem; }
+.kartu .merek { color: var(--redup); }
+.kartu .harga { color: var(--aksen); font-weight: 700; margin-top: 0.75rem; font-size: 1.15rem; }
+.kartu .kode { color: var(--redup); font-size: 0.8rem; margin-top: 0.5rem; }
+.lencana {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--aksen);
+  color: #0f172a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+}
+
+.panel { background: var(--panel); border: 1px solid var(--garis); border-radius: 12px; padding: 2rem; }
+.panel h1 { margin-bottom: 0.75rem; }
+.panel h3 { margin-top: 1.25rem; }
+.sempit { max-width: 520px; margin: 0 auto; }
+
+.baris { margin-bottom: 1rem; }
+label { display: block; margin-bottom: 0.25rem; color: var(--redup); font-size: 0.9rem; }
+input, select {
+  width: 100%;
+  padding: 0.6rem;
+  background: var(--bg);
+  color: var(--teks);
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+}
+
+.tombol {
+  display: inline-block;
+  background: var(--aksen);
+  color: #0f172a;
+  font-weight: 700;
+  padding: 0.65rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bawah { text-align: center; padding: 2rem; color: var(--redup); font-size: 0.85rem; }
